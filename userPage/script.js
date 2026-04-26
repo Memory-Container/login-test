@@ -1,9 +1,10 @@
-let currentUser = JSON.parse(localStorage.getItem("currentUser") == "" ? "{}" : localStorage.getItem("currentUser"))
 window.onload = () => {
+    let currentUser = JSON.parse(localStorage.getItem("currentUser") == "" ? "{}" : localStorage.getItem("currentUser"))
     if (Object.keys(currentUser).length === 0) {
         location.assign("/loginPage/")
     }
 }
+let currentUser = JSON.parse(localStorage.getItem("currentUser") == "" ? "{}" : localStorage.getItem("currentUser"))
 document.body.innerHTML = `
     <div>
         <div class="welcome-message">
