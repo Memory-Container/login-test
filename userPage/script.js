@@ -1,10 +1,9 @@
+let currentUser = localStorage.getItem("currentUser") ?? ""
 window.onload = () => {
-    let currentUser = localStorage.getItem("currentUser") ?? ""
-    if (currentUser == "") {
+    if (currentUser === "") {
         location.assign("/loginPage/")
     }
 }
-let currentUser = JSON.parse(localStorage.getItem("currentUser"))
 document.body.innerHTML = `
     <div>
         <div class="welcome-message">
