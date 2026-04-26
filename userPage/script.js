@@ -1,4 +1,4 @@
-let currentUser = JSON.parse(localStorage.getItem("currentUser")) ?? ""
+let currentUser = JSON.parse(localStorage.getItem("currentUser") == "" ? {} : localStorage.getItem("currentUser"))
 window.onload = () => {
     if (currentUser === "") {
         location.assign("/loginPage/")
@@ -25,6 +25,7 @@ let email = document.querySelector(".email")
 
 username.textContent = currentUser.username
 email.textContent = currentUser.email
+currentUser = []
 function userLogOut() {
     localStorage.setItem("currentUser", "")
     location.assign("/loginPage/")
