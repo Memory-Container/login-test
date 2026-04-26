@@ -29,5 +29,5 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("userInfoList", JSON.stringify(availableUser))
     errorText.textContent = "Register Successfully"
     errorText.style.color = "green"
-    setTimeout(() => {location.replace("/loginPage/")}, 500)
+    setTimeout(() => {location.assign("/loginPage/")}, 500)
 })

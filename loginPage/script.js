@@ -23,5 +23,5 @@ form.addEventListener("submit", (e) => {
     }))
     errorText.textContent = "Login Successfully"
     errorText.style.color = "green"
-    setTimeout(() => {location.replace("/userPage/")}, 500)
+    setTimeout(() => {location.assign("/userPage/")}, 500)
 })

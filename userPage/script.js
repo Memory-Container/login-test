@@ -25,5 +25,5 @@ username.textContent = currentUser.username
 email.textContent = currentUser.email
 function userLogOut() {
     localStorage.removeItem("currentUser")
-    location.replace("/loginPage/")
+    location.assign("/loginPage/")
 }
