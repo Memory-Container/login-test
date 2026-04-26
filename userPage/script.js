@@ -1,7 +1,7 @@
 window.onload = () => {
     let currentUser = JSON.parse(localStorage.getItem("currentUser") === null ? location.assign("/loginPage/") : localStorage.getItem("currentUser"))
 }
-let currentUser = JSON.parse(localStorage.getItem("currentUser") == "" ? "{}" : localStorage.getItem("currentUser"))
+let currentUser = JSON.parse(localStorage.getItem("currentUser") === null ? location.assign("/loginPage/") : localStorage.getItem("currentUser"))
 document.body.innerHTML = `
     <div>
         <div class="welcome-message">
@@ -23,7 +23,6 @@ let email = document.querySelector(".email")
 
 username.textContent = currentUser.username
 email.textContent = currentUser.email
-currentUser = {}
 function userLogOut() {
     localStorage.removeItem("currentUser")
     location.assign("/loginPage/")
