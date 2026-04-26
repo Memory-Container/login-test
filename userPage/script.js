@@ -1,4 +1,4 @@
-let currentUser = localStorage.getItem("currentUser") ?? ""
+let currentUser = JSON.parse(localStorage.getItem("currentUser")) ?? ""
 window.onload = () => {
     if (currentUser === "") {
         location.assign("/loginPage/")
