@@ -26,8 +26,7 @@ let email = document.querySelector(".email")
 
 username.textContent = currentUser.username
 email.textContent = currentUser.email
-currentUser = []
 function userLogOut() {
-    localStorage.setItem("currentUser", "")
+    localStorage.setItem("currentUser", JSON.stringify("{}"))
     location.assign("/loginPage/")
 }
