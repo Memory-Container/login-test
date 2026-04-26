@@ -1,6 +1,6 @@
-window.onload = () => {
+window.addEventListener('pageshow', () => {
     let currentUser = JSON.parse(localStorage.getItem("currentUser") === null ? location.assign("/loginPage/") : localStorage.getItem("currentUser"))
-}
+})
 let currentUser = JSON.parse(localStorage.getItem("currentUser") === null ? location.assign("/loginPage/") : localStorage.getItem("currentUser"))
 document.body.innerHTML = `
     <div>
