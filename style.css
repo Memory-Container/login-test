@@ -62,7 +62,7 @@ h2 {
     background-color: #0056b3;
 }
 
-.signup-link {
+.signup-link, .login-link {
     text-align: center;
     margin-top: 1rem;
     font-size: 0.9rem;
