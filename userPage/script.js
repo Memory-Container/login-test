@@ -1,6 +1,6 @@
-let currentUser = JSON.parse(localStorage.getItem("currentUser") == "" ? {} : localStorage.getItem("currentUser"))
+let currentUser = JSON.parse(localStorage.getItem("currentUser") == "" ? "{}" : localStorage.getItem("currentUser"))
 window.onload = () => {
-    if (currentUser === "") {
+    if (Object.keys(currentUser).length === 0) {
         location.assign("/loginPage/")
     }
 }
