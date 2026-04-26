@@ -1,8 +1,5 @@
 window.onload = () => {
-    let currentUser = JSON.parse(localStorage.getItem("currentUser") == "" ? "{}" : localStorage.getItem("currentUser"))
-    if (Object.keys(currentUser).length === 0) {
-        location.assign("/loginPage/")
-    }
+    let currentUser = JSON.parse(localStorage.getItem("currentUser") === null ? location.assign("/loginPage/") : localStorage.getItem("currentUser"))
 }
 let currentUser = JSON.parse(localStorage.getItem("currentUser") == "" ? "{}" : localStorage.getItem("currentUser"))
 document.body.innerHTML = `
@@ -26,7 +23,8 @@ let email = document.querySelector(".email")
 
 username.textContent = currentUser.username
 email.textContent = currentUser.email
+currentUser = {}
 function userLogOut() {
-    localStorage.setItem("currentUser", JSON.stringify("{}"))
+    localStorage.removeItem("currentUser")
     location.assign("/loginPage/")
 }
